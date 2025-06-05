@@ -1,0 +1,1 @@
+# This file serves as a placeholder for any assets that may be added to the project in the future.

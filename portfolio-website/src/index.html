@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="nav-brand">Mayor</div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#about" class="active">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="header-content">
+    <div class="profile-image-container">
+      <img src="assets/Mayor.jpg" alt="" class="profile-image">
+    </div>
+    <h1>Hey! 👋 <br>
+      I'm Binuyo Mayowa
+    </h1>
+    <p class="subtitle">Web Developer | Designer | Creator</p>    
+  </div>
+<main class="container">
+  
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm a passionate developer with a love for building beautiful and functional web experiences. Welcome to my portfolio!</p>
+  </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5, CSS3, JavaScript (ES6+)</li>
+      <li>React, Vue, Angular</li>
+      <li>Node.js, Express</li>
+      <li>Python, Django</li>
+      <li>UI/UX Design</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience">
+      <div>
+        <h3>Frontend Developer - Tech Company</h3>
+        <span>2023 - Present</span>
+        <p>Developed modern web applications and collaborated with designers to create seamless user experiences.</p>
+      </div>
+      <div>
+        <h3>Web Designer - Creative Studio</h3>
+        <span>2021 - 2023</span>
+        <p>Designed and built responsive websites for various clients, focusing on usability and aesthetics.</p>
+      </div>
+    </div>
+  </section>
+ <section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project">
+      <img src="assets/image1.png" alt="Project One" class="project-img">
+      <h3>Project One</h3>
+      <p>A short description of the project goes here.</p>
+    </div>
+    <div class="project">
+      <img src="assets/image2.png" alt="Project Two" class="project-img">
+      <h3>Project Two</h3>
+      <p>A short description of the project goes here.</p>
+    </div>
+  </div>
+</section>
+  <section id="contact">
+  <h2>Contact</h2>
+  <form class="contact-form" autocomplete="off">
+    <div class="form-group">
+      <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+</main>
+<footer>
+  <p>&copy; 2025 Your Name. All rights reserved.</p>
+</footer>
+<script src="scripts/main.js"></script>
+<button id="scrollTopBtn" title="Go to top">&#8679;</button>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Scroll-to-top button
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    });
+    scrollBtn.onclick = function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+  });
+</script>
+</body>
+</html>
