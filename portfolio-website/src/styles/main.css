@@ -253,6 +253,7 @@ body {
   margin: 0;
   padding: 0;
   margin-right: 5%;
+  height: 300px;
 }
 
 .nav-links li a {
@@ -310,7 +311,7 @@ body {
     display: none;
     position: absolute;
     top: 64px;
-    right: 1rem;
+    right: 0;
     background: rgba(44, 62, 80, 0.98);
     flex-direction: column;
     gap: 1.5rem;
@@ -318,8 +319,10 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     border-radius: 8px;
     z-index: 250;
-    min-width: 160px;
-    align-items: flex-end;
+    min-width: unset;
+    align-items: flex-start;
+    height: calc(100vh - 64px);
+    padding-right: 10rem;
   }
   .nav-links.open {
     display: flex;
