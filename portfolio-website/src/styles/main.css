@@ -253,7 +253,6 @@ body {
   margin: 0;
   padding: 0;
   margin-right: 5%;
-  height: 300px;
 }
 
 .nav-links li a {
@@ -301,6 +300,7 @@ body {
   .navbar {
     padding: 1rem;
   }
+  
   .nav-links {
     gap: 1rem;
   }
@@ -324,9 +324,11 @@ body {
     height: calc(100vh - 64px);
     padding-right: 10rem;
   }
+
   .nav-links.open {
     display: flex;
   }
+
   .nav-toggle {
     display: flex;
   }
